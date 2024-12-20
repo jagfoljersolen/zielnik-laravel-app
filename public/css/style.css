@@ -1,0 +1,225 @@
+
+body {
+    background: linear-gradient(90deg, rgb(204, 221, 165) 0%, rgb(177, 189, 112) 35%, rgb(194, 201, 93) 100%);
+    
+}
+
+h1{
+    background: #472a13;
+    color: #aca43a;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+#menu {
+    display: inline-block;
+   
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+
+#menu li {
+    display: inline-block;
+    margin: 0 30px;
+    padding: 0;
+    list-style: none;
+    padding-right: 3px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:x-large;
+}
+
+ #menu a:hover {
+    text-decoration:underline;
+} 
+
+#nav {
+    align-content: center;
+    overflow: hidden;
+    font-family: calibri, tahoma;
+}
+
+ul#nav li {
+    list-style-type: none;
+    text-align: center;
+    margin-left: 3px;
+}
+
+
+
+ul#nav li a {
+    display: block;
+    padding: 4pt;
+    text-decoration: none;
+}
+
+
+.galeria {
+    list-style-type: none;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    
+}
+
+
+.obrazek img {
+    height:auto;
+    width:auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.gallerybox {
+    background: rgb(119, 196, 247);
+    float: left;
+    width:78%;
+}
+
+
+.obrazek {
+    position: relative;
+    margin: 20px;
+}
+
+.obrazek img {
+    display: block;
+    height: auto;
+    width: auto;
+    border-radius: 20px; 
+}
+
+.description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(69, 94, 23, 0.8);
+    color: white;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.7s;
+    text-align: center;
+    padding: 20px;
+    width: 87%;
+    height: 90%;
+    border-radius: 20px; 
+    font-size: large;
+}
+
+.obrazek:hover .description {
+    visibility: visible;
+    opacity: 1;
+
+    
+}
+
+.error {
+    color: rgb(100, 33, 33);
+    display: none;
+}
+
+
+
+#order, #info {
+    background-color: rgb(177, 189, 112, 0.8);
+}
+
+#cennik {
+    background: linear-gradient(90deg,rgb(194, 201, 93) 0%, rgb(177, 189, 112) 60%, rgb(204, 221, 165) 100%);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: #472a13;
+}
+form {
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+fieldset {
+    border: 2px solid #472a13;
+    margin: 0 0 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+legend {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], select {
+    width: 20%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #9bb461;
+    border-radius: 5px;
+    background-color: #ebf5bf;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+}
+
+button {
+    background-color: #472a13;
+    color: rgb(241, 237, 196);
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: medium;
+}
+
+button:hover {
+    background-color: #696b05;
+}
+
+#remove,
+#clear{
+    background-color: #472a13;
+    color:  rgb(247, 244, 211);
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size:small;
+}
+#remove:hover,
+#clear:hover {
+    background-color: #696b05;
+}
+#cart {
+    
+    background: linear-gradient(90deg,rgb(194, 201, 93) 0%, rgb(177, 189, 112) 60%, rgb(204, 221, 165) 100%);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color:#472a13;
+}
+
+.contact-info {
+    text-align: center;
+    margin-bottom: 20px;
+    color:#2c190a;
+}
+
+.contact-info p {
+    margin: 20px 0;
+}
+
+.map {
+       text-align: center;
+}
+
+
+
