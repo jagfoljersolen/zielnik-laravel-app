@@ -141,6 +141,13 @@ function validateInput(id, errorId) {
 }
 
 function submitOrder() {
+    
+    if (!window.isAuthenticated) {
+        alert('Musisz być zalogowany, aby złożyć zamówienie.');
+        window.location.href = "/login"; 
+        return;
+    }
+
     const imieValid = validateInput('imie', 'imieError');
     const nazwiskoValid = validateInput('nazwisko', 'nazwiskoError');
     const emailValid = validateInput('email', 'emailError');
@@ -151,46 +158,40 @@ function submitOrder() {
         return;
     }
 
-    
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-    
     if (cart.length === 0) {
         alert('Proszę dodać coś do koszyka');
         return;
     }
 
-    
     const imie = document.getElementById('imie').value.trim();
     const nazwisko = document.getElementById('nazwisko').value.trim();
     const email = document.getElementById('email').value.trim();
     const telefon = document.getElementById('telefon').value.trim();
 
     let orderInfo = `
-        Imię: ${imie}
-        Nazwisko: ${nazwisko}
-        Email: ${email}
-        Telefon: ${telefon}
-        
-        Zamówione produkty:\n`;
+        Imię: ${imie}<br>
+        Nazwisko: ${nazwisko}<br>
+        Email: ${email}<br>
+        Telefon: ${telefon}<br><br>
+        Zamówione produkty:<br>`;
 
-    
     cart.forEach(item => {
         orderInfo += `
-            Mieszanka: ${Array.isArray(item.mix) ? item.mix.join(', ') : item.mix}
-            Ilość: ${item.quantity}g\n`;
+            Mieszanka: ${Array.isArray(item.mix) ? item.mix.join(', ') : item.mix}<br>
+            Ilość: ${item.quantity}g<br><br>`;
     });
 
-    
     if (confirm(`Czy na pewno chcesz złożyć zamówienie z następującymi danymi?\n\n${orderInfo}`)) {
-        
-        console.log(orderInfo);
+        //console.log(orderInfo); 
         alert('Zamówienie zostało złożone. Dziękujemy!');
         document.getElementById('order').reset();
         document.getElementById('info').reset();
-        clearCart();
+        clearCart(); 
     }
 }
+
 
 function resetForm() {
     document.getElementById('info').reset();

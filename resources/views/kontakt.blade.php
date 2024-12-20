@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     </head>
 <body>
+    <h1></h1>
+    <!-- Authentication Links -->
+    <div class="auth-links">
+        @auth
+            <a href="{{ url('/home') }}">Home</a>
+        @else
+            <a href="{{ route('login') }}">Logowanie</a>
+            @if (Route::has('register'))
+                <a href="{{ route('register') }}">Rejestracja</a>
+            @endif
+        @endauth
+    </div>
+
+
     <div id="menu">
         <ul id="nav">
             <li><a href="{{ url('/') }}">Home</a></li>
@@ -15,6 +29,7 @@
         </ul>
     </div>
     
+
     
 
     <div class="contact-info">
