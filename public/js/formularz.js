@@ -142,9 +142,20 @@ function validateInput(id, errorId) {
 
 function submitOrder() {
     
+    // if (!window.isAuthenticated) {
+    //     alert('Musisz być zalogowany, aby złożyć zamówienie.');
+    //     //window.location.href = "/login"; 
+    //     return;
+    // }
     if (!window.isAuthenticated) {
         alert('Musisz być zalogowany, aby złożyć zamówienie.');
-        window.location.href = "/login"; 
+        
+        // Capture the current URL before redirecting to the login page
+        const currentUrl = window.location.href; 
+        
+        // Redirect to login page with the current URL as the "redirect" query parameter
+        window.location.href = `/login?redirect=${encodeURIComponent(currentUrl)}`; 
+        
         return;
     }
 

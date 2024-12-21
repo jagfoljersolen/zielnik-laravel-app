@@ -8,6 +8,7 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
+use Redirect;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -16,6 +17,11 @@ class AuthenticatedSessionController extends Controller
      */
     public function create(): View
     {
+        if (url()->previous() != url()->current()){
+
+            Redirect::setIntendedUrl(url()->previous());
+    
+            }
         return view('auth.login');
     }
 
@@ -28,7 +34,9 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerate();
 
-        return redirect()->intended(route('dashboard', absolute: false));
+        return redirect()->intended(url()->previous() ?: route('/'));
+ 
+        
     }
 
     /**
@@ -42,6 +50,7 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        #return redirect('/');
+        return redirect()->back();
     }
 }

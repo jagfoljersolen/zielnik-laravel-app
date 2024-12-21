@@ -10,9 +10,20 @@
     <h1>Serwer Roślin</h1>
 
     <!-- Authentication Links -->
+    <div class="welcome">
+        @auth
+        <span>Witaj, {{ Auth::user()->name }}</span>
+        @endauth
+    </div>
     <div class="auth-links">
         @auth
-            <a href="{{ url('/home') }}">Home</a>
+        <a href="{{ route('logout') }}"
+           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+            Wyloguj
+        </a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+        </form>
         @else
             <a href="{{ route('login') }}">Logowanie</a>
             @if (Route::has('register'))

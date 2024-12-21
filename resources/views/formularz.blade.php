@@ -15,11 +15,23 @@
 <body>
     <h1></h1>
     <!-- Authentication Links -->
+    <!-- Authentication Links -->
+    <div class="welcome">
+        @auth
+        <span>Witaj, {{ Auth::user()->name }}</span>
+        @endauth
+    </div>
     <div class="auth-links">
         @auth
-            <a href="{{ url('/home') }}">Home</a>
+        <a href="{{ route('logout') }}"
+           onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+            Wyloguj
+        </a>
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+            @csrf
+        </form>
         @else
-            <a href="{{ route('login') }}">Logownie</a>
+            <a href="{{ route('login') }}">Logowanie</a>
             @if (Route::has('register'))
                 <a href="{{ route('register') }}">Rejestracja</a>
             @endif
@@ -108,7 +120,7 @@
         <legend>Dane osobowe</legend>
         <p>
             <label for="imie">Imię*:</label><br>
-            <input type="text" id="imie" name="imie" required
+            <input type="text" id="imie" name="imie"  value="{{ Auth::check() ? Auth::user()->name : '' }}"  required
                 pattern="^[a-zA-ZąćęłńóśżźĄĆĘŁŃÓŚŻŹ]{2,20}( [a-zA-ZąćęłńóśżźĄĆĘŁŃÓŚŻŹ]{2,20})?$"><br>
             <span id="imieError" class="error">Proszę podać poprawne imię.</span>
         </p>
@@ -120,7 +132,7 @@
         </p>
         <p>
             <label for="email">Email*:</label><br>
-            <input type="email" id="email" name="email" required
+            <input type="email" id="email" name="email" value="{{ Auth::check() ? Auth::user()->email : '' }}" required
                 pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"><br>
             <span id="emailError" class="error">Proszę podać poprawny adres email.</span>
         </p>

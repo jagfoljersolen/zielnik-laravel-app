@@ -7,15 +7,15 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+// Route::get('/dashboard', function () {
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
 
 
 Route::get('/', function () {
     return view('home'); 
-});
+})->name('home');;
 
 Route::get('/formularz', function () {
     return view('formularz'); 
@@ -34,3 +34,4 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 Route::post('/zloz-zamowienie', [OrderController::class, 'submitOrder'])->middleware('auth');
+
