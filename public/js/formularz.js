@@ -182,16 +182,16 @@ function submitOrder() {
     const telefon = document.getElementById('telefon').value.trim();
 
     let orderInfo = `
-        Imię: ${imie}<br>
-        Nazwisko: ${nazwisko}<br>
-        Email: ${email}<br>
-        Telefon: ${telefon}<br><br>
-        Zamówione produkty:<br>`;
+        Imię: ${imie}
+        Nazwisko: ${nazwisko}
+        Email: ${email}
+        Telefon: ${telefon}
+        \nZamówione produkty:\n`;
 
     cart.forEach(item => {
         orderInfo += `
-            Mieszanka: ${Array.isArray(item.mix) ? item.mix.join(', ') : item.mix}<br>
-            Ilość: ${item.quantity}g<br><br>`;
+            Mieszanka: ${Array.isArray(item.mix) ? item.mix.join(', ') : item.mix}
+            Ilość: ${item.quantity}g\n`;
     });
 
     if (confirm(`Czy na pewno chcesz złożyć zamówienie z następującymi danymi?\n\n${orderInfo}`)) {
