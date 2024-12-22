@@ -11,7 +11,9 @@
     <!-- Authentication Links -->
     <div class="welcome">
         @auth
-        <span>Witaj, {{ Auth::user()->name }}</span>
+        <a href="{{ url('/profile/partials/edit') }}">
+        Witaj, {{ Auth::user()->name }}
+        </a>
         @endauth
     </div>
     <div class="auth-links">

@@ -35,3 +35,15 @@ require __DIR__.'/auth.php';
 
 Route::post('/zloz-zamowienie', [OrderController::class, 'submitOrder'])->middleware('auth');
 
+Route::get('/profile/partials/edit', [ProfileController::class, 'edit'])->name('profile.edit');
+
+Route::get('/profile', [ProfileController::class, 'showProfile'])->middleware('auth');
+
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
+});
+
+
+
+
