@@ -69,7 +69,7 @@
                 <a>
                     <img src="{{ asset('images/szalwia_draw.jpg') }}" alt="image3" class="gallery-img">
                     <div class="description">Szałwia (Salvia L.) – rodzaj roślin z rodziny jasnotowatych. Szałwie występują w stanie dzikim na całej kuli ziemskiej, z wyjątkiem obszarów o klimacie polarnym. 
-                        <br><br>Szałwia posiada właściwości przeciwzapalne i przeciwbakteryjne, poprawia trawienie, łagodzi objawy menopauzy, wspiera układ odporonościowy, ułatwia relaks i dobry sen a także poprawia koncentrację.
+                        <br><br>Szałwia posiada właściwości przeciwzapalne i przeciwbakteryjne, poprawia trawienie, wspiera układ odporonościowy, ułatwia relaks i dobry sen a także poprawia koncentrację.
                     </div>
                 </a>
             </li>
@@ -77,8 +77,7 @@
                 <a>
                     <img src="{{ asset('images/mieta_draw.jpg') }}" alt="image4" class="gallery-img">
                     <div class="description">Mięta (Mentha L.) – rodzaj roślin z rodziny jasnotowatych (Lamiaceae). Zasięg rodzaju obejmuje wszystkie kontynenty z wyjątkiem Antarktydy i Ameryki Południowej.
-                        <br><br>Mięta pobudza wydzielanie soku żołądkowego, działa żółciopędnie, przez co ułatwia trawienie i jest zalecana przy niestrawności. Eliminuje wzdęcia oraz reguluje perystaltykę jelit. Działa również odświeżająco w jamie ustnej. Nie zaleca się jednak zbyt długiego stosowania, gdyż może podrażnić ściany żołądka.
-                    </div>
+                        <br><br>Mięta pobudza wydzielanie soku żołądkowego, działa żółciopędnie, przez co ułatwia trawienie i jest zalecana przy niestrawności. Eliminuje wzdęcia oraz reguluje perystaltykę jelit. Działa również odświeżająco w jamie ustnej. 
                 </a>
             </li>
             <li class="obrazek">

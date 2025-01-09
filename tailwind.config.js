@@ -20,12 +20,12 @@ export default {
                     100: 'rgb(123, 136, 47)'
                 },
                 brown: {
-                    50: 'rgb(250, 243, 224)', // Correct rgb format
-                    100: 'rgb(245, 224, 179)', // Correct rgb format
-                    200: 'rgb(224, 181, 135)', // Correct rgb format
-                    500: 'rgb(158, 125, 71)',  // Correct rgb format
-                    700: 'rgb(109, 79, 41)',   // Correct rgb format
-                    900: 'rgb(78, 58, 46)',    // Correct rgb format
+                    50: 'rgb(250, 243, 224)', 
+                    100: 'rgb(245, 224, 179)', 
+                    200: 'rgb(224, 181, 135)', 
+                    500: 'rgb(158, 125, 71)',  
+                    700: 'rgb(109, 79, 41)',   
+                    900: 'rgb(78, 58, 46)',    
                 },
             },
         },
