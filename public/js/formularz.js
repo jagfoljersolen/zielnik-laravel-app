@@ -142,11 +142,7 @@ function validateInput(id, errorId) {
 
 function submitOrder() {
     
-    // if (!window.isAuthenticated) {
-    //     alert('Musisz być zalogowany, aby złożyć zamówienie.');
-    //     //window.location.href = "/login"; 
-    //     return;
-    // }
+    
     if (!window.isAuthenticated) {
         alert('Musisz być zalogowany, aby złożyć zamówienie.');
         
@@ -176,6 +172,14 @@ function submitOrder() {
         return;
     }
 
+    // Calculate and set total price in the hidden input field
+    const totalPrice = cartSum();
+    document.getElementById('totalPriceInput').value = totalPrice;
+
+    // Serialize the cart data
+    document.getElementById('cartInput').value = JSON.stringify(cart);
+
+
     const imie = document.getElementById('imie').value.trim();
     const nazwisko = document.getElementById('nazwisko').value.trim();
     const email = document.getElementById('email').value.trim();
@@ -194,8 +198,11 @@ function submitOrder() {
             Ilość: ${item.quantity}g\n`;
     });
 
+    orderInfo += `\nŁączna cena: ${totalPrice}zł`;
+
     if (confirm(`Czy na pewno chcesz złożyć zamówienie z następującymi danymi?\n\n${orderInfo}`)) {
-        //console.log(orderInfo); 
+        
+        document.getElementById('order').submit();
         alert('Zamówienie zostało złożone. Dziękujemy!');
         document.getElementById('order').reset();
         document.getElementById('info').reset();

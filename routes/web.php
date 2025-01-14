@@ -44,6 +44,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
 });
 
+use App\Http\Controllers\OrderController;
 
+Route::post('/order/store', [OrderController::class, 'store'])->name('order.store');
 
 

@@ -56,7 +56,10 @@
         </ul>
     </div>
     <div>
-        <form id="order" action="#" method="get">
+        <form id="order" action="{{ route('order.store') }}" method="POST">
+            @csrf
+            <input type="hidden" id="cartInput" name="cart">
+            <input type="hidden" id="totalPriceInput" name="total_price">
             <fieldset>
                 <legend>Wybierz mieszankę</legend>
                 <p>
@@ -110,13 +113,13 @@
             <p>
                 <button type="button" onclick="addToCart()">Dodaj do koszyka</button>
             </p>
-        </form>
+        
     </div>
     <div id="cart">
         <h3>Koszyk</h3>
         <p>Koszyk jest pusty</p>
     </div>
-    <form id="info">
+    
     <fieldset>
         <legend>Dane osobowe</legend>
         <p>
@@ -148,7 +151,7 @@
         <button type="button" onclick="submitOrder()">Złóż zamówienie</button>
         <button type="button" onclick="resetForm()">Wyczyść dane osobowe</button>
     </p>
-</form>
+    </form>
 </body>
 
 </html>
