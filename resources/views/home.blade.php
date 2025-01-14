@@ -12,9 +12,16 @@
     <!-- Authentication Links -->
     <div class="welcome">
         @auth
-        <a href="{{ url('/profile/partials/edit') }}">
-        Witaj, {{ Auth::user()->name }}
+        <div class="dropdown">
+        <a >
+            Witaj, {{ Auth::user()->name }}
+            <span class="dropdown-icon">▼</span>
         </a>
+        <div class="dropdown-menu">
+            <a href="{{ url('/profile/partials/edit') }}">Dane konta</a>
+            <a href="{{ url('/orders/details') }}">Zamówienia</a>
+        </div>
+    </div>
         @endauth
     </div>
     <div class="auth-links">
@@ -58,8 +65,8 @@
             <li class="obrazek">
                 <a>
                     <img src="{{ asset('images/pokrzywa_draw.jpg') }}" alt="image2" class="gallery-img">
-                    <div class="description">Pokrzywa (Urtica L.) – rodzaj jednorocznych roślin zielnych lub bylin z rodziny pokrzywowatych. Należy do niej co najmniej 68 gatunków rozpowszechnionych na całej kuli ziemskiej z wyjątkiem Antarktydy.
-                        <br>Pokrzywa zwyczajna to roślina bogata w związki biologicznie czynne. Są to miedzy innymi witaminy: B2, B5, K i C oraz karotenoidy (np. karoten, likopen) i flawonoidy (m.in. kwercetyna, kemferol i rutyna).
+                    <div class="description">Pokrzywa (Urtica L.) – rodzaj jednorocznych roślin zielnych lub bylin z rodziny pokrzywowatych. Należy do niej co najmniej 68 gatunków występujących na całej kuli ziemskiej z wyjątkiem Antarktydy.
+                        <br> <br>Pokrzywa zwyczajna to roślina bogata w związki biologicznie czynne. Są to miedzy innymi witaminy: B2, B5, K i C oraz karotenoidy i flawonoidy.
                         Ma działanie przeciwzapalne, odkażające, wzmacniające organizm. 
 
                     </div>
@@ -78,6 +85,7 @@
                     <img src="{{ asset('images/mieta_draw.jpg') }}" alt="image4" class="gallery-img">
                     <div class="description">Mięta (Mentha L.) – rodzaj roślin z rodziny jasnotowatych (Lamiaceae). Zasięg rodzaju obejmuje wszystkie kontynenty z wyjątkiem Antarktydy i Ameryki Południowej.
                         <br><br>Mięta pobudza wydzielanie soku żołądkowego, działa żółciopędnie, przez co ułatwia trawienie i jest zalecana przy niestrawności. Eliminuje wzdęcia oraz reguluje perystaltykę jelit. Działa również odświeżająco w jamie ustnej. 
+                    </div>
                 </a>
             </li>
             <li class="obrazek">
@@ -101,8 +109,7 @@
                 <a>
                     <img src="{{ asset('images/dziurawiec_draw.jpg') }}" alt="image7" class="gallery-img">
                     <div class="description">Dziurawiec (Hypericum L.) – rodzaj roślin z rodziny dziurawcowatych. Obejmuje co najmniej 507 gatunków - w tym 8 w Polsce. Zasiedla bardzo zróżnicowane środowiska.
-                        <br><br>Ma bardzo szerokie zastosowanie w ziołolecznictwie m.in reguluje procesy trawienne oraz układ nerwowy w stanach obniżenia samopoczucia. Podwyższa wrażliwość skóry na promienie słoneczne.
-                        Z tego powodu zaleca się stosować w sezonie jesienno-zimowym.
+                        <br><br>Ma bardzo szerokie zastosowanie w ziołolecznictwie m.in reguluje procesy trawienne oraz układ nerwowy w stanach obniżenia samopoczucia. 
             
                     </div>
                 </a>

@@ -11,9 +11,16 @@
     <!-- Authentication Links -->
     <div class="welcome">
         @auth
-        <a href="{{ url('/profile/partials/edit') }}">
-        Witaj, {{ Auth::user()->name }}
+        <div class="dropdown">
+        <a >
+            Witaj, {{ Auth::user()->name }}
+            <span class="dropdown-icon">▼</span>
         </a>
+        <div class="dropdown-menu">
+            <a href="{{ url('/profile/partials/edit') }}">Dane konta</a>
+            <a href="{{ url('/orders/details') }}">Zamówienia</a>
+        </div>
+    </div>
         @endauth
     </div>
     <div class="auth-links">
@@ -48,6 +55,7 @@
     </div>
 
     <div class="contact-info">
+        <br>
         <p><strong>Adres:</strong> ul.Żeglarska 8, 20-443 Lublin</p>
         <p><strong>Telefon:</strong> +48 675 456 789</p>
         <p><strong>Email:</strong> serwer@roslin.com</p>

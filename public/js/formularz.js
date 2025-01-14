@@ -203,16 +203,15 @@ function submitOrder() {
     if (confirm(`Czy na pewno chcesz złożyć zamówienie z następującymi danymi?\n\n${orderInfo}`)) {
         
         document.getElementById('order').submit();
-        alert('Zamówienie zostało złożone. Dziękujemy!');
+        localStorage.removeItem('cart');
         document.getElementById('order').reset();
-        document.getElementById('info').reset();
         clearCart(); 
     }
 }
 
 
 function resetForm() {
-    document.getElementById('info').reset();
+    document.getElementById('order').reset();
     document.getElementById('imieError').style.display = 'none';
     document.getElementById('nazwiskoError').style.display = 'none';
     document.getElementById('emailError').style.display = 'none';

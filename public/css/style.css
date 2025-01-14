@@ -1,7 +1,6 @@
 
 body {
     background: linear-gradient(90deg, rgb(204, 221, 165) 0%, rgb(177, 189, 112) 35%, rgb(194, 201, 93) 100%);
-    
 }
 
 h1{
@@ -242,8 +241,110 @@ button:hover {
 .welcome {
     position: absolute;
     top: 10px;
-    left: 50%;          
+    left: 150px;          
     transform: translateX(-50%); 
     font-size: 20px;
-    color: #666e1e;
+    color: #767e2e;
+}
+
+.confirmation {
+    background-color: rgb(177, 189, 112, 0.8);
+    color: #472a13;
+    font-size: large;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 40px auto;
+    width: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+a {
+    color: #476600;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown a {
+    text-decoration: none;
+    color: #767e2e;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.dropdown-icon {
+    margin-left: 5px;
+    font-size: 14px;
+    color: #767e2e;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    background: linear-gradient(90deg, rgb(204, 221, 165) 0%, rgb(177, 189, 112) 60%, rgb(194, 201, 93) 100%);
+    border: 2px solid #9bb461;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 220px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 12px 15px;
+    color: #472a13;
+    text-decoration: none;
+    font-size: medium;
+    border-bottom: 1px solid #9bb461;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #677e29;
+    color: #f7f4d3;
+    border-radius: 9px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+
+.contact-info {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    color: #472a13;
+}
+
+ .map {
+    margin-top: 30px;
+    
+}
+
+
+.map iframe {
+    
+    width: 50%;
+    border-radius: 400px;
+    border: 1px solid #aca43a; 
 }

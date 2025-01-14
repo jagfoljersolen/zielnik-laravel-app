@@ -17,9 +17,16 @@
     <!-- Authentication Links -->
     <div class="welcome">
         @auth
-        <a href="{{ url('/profile/partials/edit') }}">
-        Witaj, {{ Auth::user()->name }}
+        <div class="dropdown">
+        <a >
+            Witaj, {{ Auth::user()->name }}
+            <span class="dropdown-icon">▼</span>
         </a>
+        <div class="dropdown-menu">
+            <a href="{{ url('/profile/partials/edit') }}">Dane konta</a>
+            <a href="{{ url('/orders/details') }}">Zamówienia</a>
+        </div>
+    </div>
         @endauth
     </div>
     <div class="auth-links">
@@ -147,11 +154,16 @@
             <span id="telefonError" class="error">Proszę podać poprawny numer telefonu.</span>
         </p>
     </fieldset>
+
     <p>
         <button type="button" onclick="submitOrder()">Złóż zamówienie</button>
-        <button type="button" onclick="resetForm()">Wyczyść dane osobowe</button>
+        <button type="button" onclick="resetForm()">Wyczyść</button>
     </p>
     </form>
+    
+
 </body>
 
 </html>
+
+

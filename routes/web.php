@@ -19,11 +19,16 @@ Route::get('/', function () {
 
 Route::get('/formularz', function () {
     return view('formularz'); 
-});
+})->name('formularz');
+
 
 Route::get('/kontakt', function () {
     return view('kontakt'); 
 });
+
+Route::get('/confirmation', function(){
+    return view('confirmation');
+})->name('confirmation');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
