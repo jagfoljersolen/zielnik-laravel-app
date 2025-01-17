@@ -26,6 +26,9 @@ Route::get('/kontakt', function () {
     return view('kontakt'); 
 });
 
+Route::get('/orders', function () {
+    return view('orders'); 
+})->name('orders');
 Route::get('/confirmation', function(){
     return view('confirmation');
 })->name('confirmation');

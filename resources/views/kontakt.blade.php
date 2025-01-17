@@ -18,7 +18,7 @@
         </a>
         <div class="dropdown-menu">
             <a href="{{ url('/profile/partials/edit') }}">Dane konta</a>
-            <a href="{{ url('/orders/details') }}">Zamówienia</a>
+            <a href="{{ url('/orders') }}">Zamówienia</a>
         </div>
     </div>
         @endauth
