@@ -2,7 +2,7 @@
 
 ## Tematyka projektu: internetowy sklep z ziołami
 
-##Funkcjonalności:
+##Funkcjonalności:##
 -uwierzytelnianie
 -przeglądanie informacji o roślinach
 -zamawianie mieszanek ziołowych 
@@ -16,7 +16,7 @@
 - baza danych: MySql
 - strona klienta: Laravel Blade, TailwindCSS, Vite
 
-## Wymagania
+## Wymagania ##
 
 Wersje programów wykorzystane do tworzenia aplikacji (aplikacja nie została przetestowana z kompatybilnością wcześniejszych wersji):
 
@@ -28,7 +28,7 @@ Wersje programów wykorzystane do tworzenia aplikacji (aplikacja nie została pr
 
 
     
-## Uruchomienie
+## Uruchomienie ##
 
 1. Plik projektowy `zielnik.com` należy umieścić w `XAMPP\htdocs`
 2. W folderze projektu, w terminalu wpisać `npm install` w celu instalacji zaleznosci `node_modules`
