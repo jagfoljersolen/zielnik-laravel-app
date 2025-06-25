@@ -37,9 +37,3 @@
     7. Uruchomienie serwera poprzez wpisanie komendy: `php artisan serve`
     8. Uruchomienie aplikacji w przeglądarce pod adresem: `localhost:8000`
    
-
-## Konto testowe ##
-
- **Test**
-    -   Login: test@test.com
-    -   Hasło: test1234
