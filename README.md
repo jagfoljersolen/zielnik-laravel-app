@@ -2,12 +2,12 @@
 
 ## Tematyka projektu: internetowy sklep z ziołami
 
-##Funkcjonalności:##
--uwierzytelnianie
--przeglądanie informacji o roślinach
--zamawianie mieszanek ziołowych 
--wyświetlanie mapki z lokalizacją sklepu
--możliwość edycji danych konta 
+## Funkcjonalności: ##
+    -uwierzytelnianie
+    -przeglądanie informacji o roślinach
+    -zamawianie mieszanek ziołowych 
+    -wyświetlanie mapki z lokalizacją sklepu
+    -możliwość edycji danych konta 
 
 **w przyszłej wersji aplikacji funkcjonalności będą rozwijane o dodanie opcji przeglądania historii zamówień dla zalogowanych użytkowników. Na ten moment złożone zamówienia są dostępne tylko po stronie serwera w bazie danych.
 
