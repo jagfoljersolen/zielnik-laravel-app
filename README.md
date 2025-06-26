@@ -1,6 +1,6 @@
 ## Final project for the lab "Web Application Programming" ##
 
-## Project topic: Online herbal store
+# Project topic: Online herbal store
 
 ## Features: 
 
@@ -33,18 +33,18 @@ Software versions used to develop the application (the app has not been tested f
     
 ## Running the application 
 
-# 1. Clone the repository from GitHub: 
+## 1. Clone the repository from GitHub: 
     git clone https://github.com/jagfoljersolen/laravel_zielnik.com
-# 2. In the project folder run:
+## 2. In the project folder run:
     npm install in the terminal to install node_modules dependencies
-# 3. In the project folder, run:
+## 3. In the project folder, run:
     composer install in the terminal to install vendor dependencies
-# 4. Start XAMPP MySQL Database and Apache Web Server
-# 5. Run the database migration: 
+## 4. Start XAMPP MySQL Database and Apache Web Server
+## 5. Run the database migration: 
     php artisan migrate to create the required tables
-# 6. Start the client by running:
+## 6. Start the client by running:
     npm run dev in the terminal
-# 7. Start the server by running: 
+## 7. Start the server by running: 
     php artisan serve
 
 Open the application in your browser at: localhost:8000
