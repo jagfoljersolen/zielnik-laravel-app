@@ -1,4 +1,4 @@
-## Final project for the lab "Web Application Programming"
+### Final project for the lab "Web Application Programming"
 
 ## Project topic: Online herbal store
 
