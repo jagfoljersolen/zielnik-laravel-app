@@ -1,39 +1,52 @@
-## Projekt zaliczeniowy z laboratorium "Programowanie aplikacji internetowych"
+## Final project for the lab "Web Application Programming"
 
-## Tematyka projektu: internetowy sklep z ziołami
+## Project topic: Online herbal store
 
-## Funkcjonalności: ##
-    -uwierzytelnianie
-    -przeglądanie informacji o roślinach
-    -zamawianie mieszanek ziołowych 
-    -wyświetlanie mapki z lokalizacją sklepu
-    -możliwość edycji danych konta 
+## Features: 
 
-## Narzędzia i technologie: ##
-    - strona serwera: Laravel
-    - baza danych: MySql
-    - strona klienta: Laravel Blade, TailwindCSS, Vite
+- Authentication
+- Browsing information about plants
+- Ordering herbal blends
+- Displaying a map with the store location
+- Ability to edit account data
 
-## Wymagania ##
+## Tools and technologies: 
 
-    Wersje programów wykorzystane do tworzenia aplikacji (aplikacja nie została przetestowana z kompatybilnością wcześniejszych wersji):
+- Server side: Laravel
 
-    - Laravel Framework 11.36.1
-    - PHP 8.2.26
-    - Composer 2.8.4
-    - Node v22.12.0
-    - mysql  Ver 15.1 Distrib 10.11.6-MariaDB
+- Database: MySQL
+
+- Client side: Laravel Blade, TailwindCSS, Vite
+
+
+## Requirements 
+
+Software versions used to develop the application (the app has not been tested for compatibility with earlier versions):
+
+- Laravel Framework 11.36.1
+- PHP 8.2.26
+- Composer 2.8.4
+- Node v22.12.0
+- Mysql  Ver 15.1 Distrib 10.11.6-MariaDB
 
 
     
-## Uruchomienie ##
+## Running the application 
 
-    1. Sklonować repozytorium z github: git clone https://github.com/jagfoljersolen/laravel_zielnik.com
-    2. W folderze projektu, w terminalu wpisać `npm install` w celu instalacji zaleznosci `node_modules`
-    3. W folderze projektu, w terminalu wpisać `composer install` w celu instalacji zaleznosci `vendor`
-    4. Włączyć XAMPP MySQL Database oraz Apache Web Server
-    5. Migracja baz danych: `php artisan migrate`, aby utworzyły się potrzebne tabele
-    6. Uruchomienie klienta poprzez wpisanie w terminalu `npm run dev`
-    7. Uruchomienie serwera poprzez wpisanie komendy: `php artisan serve`
-    8. Uruchomienie aplikacji w przeglądarce pod adresem: `localhost:8000`
+# 1. Clone the repository from GitHub: 
+    git clone https://github.com/jagfoljersolen/laravel_zielnik.com
+# 2. In the project folder run:
+    npm install in the terminal to install node_modules dependencies
+# 3. In the project folder, run:
+    composer install in the terminal to install vendor dependencies
+# 4. Start XAMPP MySQL Database and Apache Web Server
+# 5. Run the database migration: 
+    php artisan migrate to create the required tables
+# 6. Start the client by running:
+    npm run dev in the terminal
+# 7. Start the server by running: 
+    php artisan serve
+
+Open the application in your browser at: localhost:8000
+
    
